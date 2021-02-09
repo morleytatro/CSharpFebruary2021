@@ -57,6 +57,14 @@ namespace HelloCsharp
 
             myDictionary.Add("Age", 25);
             myDictionary.Add("Name", "Morley");
+
+            for(int i = 1; i <= 200; i++)
+            {
+                if(i % 3 == 0 && i % 5 == 0)
+                {
+                    Console.WriteLine($"{i} is divisible by 15!");
+                }
+            }
         }
 
     }
