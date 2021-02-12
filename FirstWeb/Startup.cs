@@ -16,7 +16,14 @@ namespace FirstWeb
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            // takes a function as an argument
             services.AddMvc(options => options.EnableEndpointRouting = false);
+
+            // function add(num1, num2) {
+            //     return num1 + num2;
+            // }
+
+            // arr.filter(put callback in here)
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
