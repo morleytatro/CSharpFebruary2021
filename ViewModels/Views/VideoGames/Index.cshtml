@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Games</title>
+</head>
+@using ViewModels.Models
+@model VideoGame[]
+
+<body>
+  <h1>Video Games</h1>
+
+  <p>Your name is @ViewBag.MyName</p>
+  @* <p>Your first name is @ViewBag.User.FirstName</p> *@
+
+  <ul>
+    @foreach(VideoGame game in Model)
+    {
+      <li>@game.Title - @game.ReleaseDate; @game.Rating</li>
+    }
+  </ul>
+</body>
+</html>
