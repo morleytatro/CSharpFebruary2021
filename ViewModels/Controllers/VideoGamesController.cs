@@ -1,3 +1,4 @@
+using System;
 using Microsoft.AspNetCore.Mvc;
 
 using ViewModels.Models; // so that we can use VideoGame
@@ -6,6 +7,8 @@ namespace ViewModels.Controllers
 {
     public class VideoGamesController : Controller
     {
+        // all our functions are "actions"
+
         [HttpGet("")]
         public ViewResult Index() // name should match the View name
         {
@@ -46,6 +49,33 @@ namespace ViewModels.Controllers
             // };
 
             return View(games);
+        }
+
+        [HttpGet("new-video-game")]
+        // show the user a form to submit one
+        // note that we're returning an object
+        // that implements the IActionResult interface
+        // show the form
+        public IActionResult NewVideoGame()
+        {
+            return View();
+        }
+
+        // process the form
+        [HttpPost("create-video-game")]
+        public IActionResult CreateVideoGame(VideoGame newGame)
+        {
+            if(ModelState.IsValid)
+            {
+                // met validations
+                Console.WriteLine(newGame.Title);
+                return View(newGame);
+            }
+            else
+            {
+                return View("NewVideoGame");
+            }
+
         }
     }
 }

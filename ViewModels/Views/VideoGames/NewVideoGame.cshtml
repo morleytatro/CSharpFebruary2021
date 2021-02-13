@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Video Game</title>
+</head>
+
+@* @using ViewModels.Models *@
+@model ViewModels.Models.VideoGame
+<body>
+  <h1>New Video Game</h1>
+
+  <form action="/create-video-game" method="post">
+    <div class="form-group">
+      <label asp-for="Title"></label>
+      <input asp-for="Title" class="form-control">
+      <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+      <label asp-for="ReleaseDate"></label>
+      <input asp-for="ReleaseDate" class="form-control">
+      <span asp-validation-for="ReleaseDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+      <label asp-for="MultiPlayer"></label>
+      <input asp-for="MultiPlayer" class="form-control">
+      <span asp-validation-for="MultiPlayer" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+      <label asp-for="Developer"></label>
+      <input asp-for="Developer" class="form-control">
+      <span asp-validation-for="Developer" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+      <label asp-for="Rating"></label>
+      <input asp-for="Rating" class="form-control">
+      <span asp-validation-for="Rating" class="text-danger"></span>
+    </div>
+    <button>Submit</button>
+  </form>
+</body>
+</html>

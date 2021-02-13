@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Created Game</title>
+</head>
+
+@* lowercase to import *@
+@model ViewModels.Models.VideoGame
+<body>
+  <h1>Created Game</h1>
+  @* uppercase to output *@
+  @* {{  }} *@
+  <p>Title: @Model.Title</p>
+  <p>Release Date: @Model.ReleaseDate</p>
+  <p>Multiplayer: @Model.MultiPlayer</p>
+  <p>Developer: @Model.Developer</p>
+  <p>Rating: @Model.Rating</p>
+</body>
+</html>
