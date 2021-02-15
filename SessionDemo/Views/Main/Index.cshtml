@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session Demo</title>
+  @* ViewBag.FavNumber *@
+</head>
+<body>
+  <h1>Session Demo</h1>
+
+  @if(ViewBag.FavNumber != null)
+  {
+    <p>Your favorite number is @ViewBag.FavNumber</p>
+    <form action="/reset" method="post">
+      <button>Reset</button>
+    </form>
+  }
+
+  <form action="/pick-favorite-number" method="post">
+    <h3>Pick Your Favorite Number</h3>
+    <input type="number" name="number">
+    <button>Submit</button>
+  </form>
+</body>
+</html>
