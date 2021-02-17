@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@* ViewBag.Hats *@
+<div class="text-center">
+  <h1>Hats</h1>
+  <ul>
+    @foreach(var hat in ViewBag.Hats)
+    {
+      <li>@hat.Brand - @hat.Color - @hat.Adjustable</li>
+    }
+  </ul>
+</div>
