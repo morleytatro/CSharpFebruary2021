@@ -1,0 +1,14 @@
+@* ViewBag.SingleHat is available *@
+
+@{
+  Hat singleHat = ViewBag.SingleHat;
+}
+
+<h1>Single Hat Page</h1>
+
+<p>Color: @singleHat.Color</p>
+<p>Brand: @singleHat.Brand</p>
+<p>Adjustable: @singleHat.Adjustable</p>
+
+<a href="/hats/@singleHat.HatId/edit">Edit</a>
+<a href="/hats/@singleHat.HatId/delete">Delete</a>

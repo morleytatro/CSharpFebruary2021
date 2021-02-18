@@ -7,7 +7,9 @@
   <ul>
     @foreach(var hat in ViewBag.Hats)
     {
-      <li>@hat.Brand - @hat.Color - @hat.Adjustable</li>
+      <li>
+        <a href="/hats/@hat.HatId">@hat.Brand - @hat.Color - @hat.Adjustable</a>
+      </li>
     }
   </ul>
 </div>
