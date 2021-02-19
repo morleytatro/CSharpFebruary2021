@@ -9,5 +9,7 @@ namespace DBDemo.Models
         public MyContext(DbContextOptions options) : base(options) {}
 
         public DbSet<Hat> Hats {get;set;}
+
+        public DbSet<Person> People {get;set;}
     }
 }

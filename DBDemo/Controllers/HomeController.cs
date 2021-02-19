@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using DBDemo.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace DBDemo.Controllers
 {
@@ -34,6 +35,7 @@ namespace DBDemo.Controllers
         {
             ViewBag.SingleHat = _context
                 .Hats
+                .Include(hat => hat.Owner) // connects each hat to its owner
                 .FirstOrDefault(hat => hat.HatId == id);
 
             return View();
@@ -43,6 +45,9 @@ namespace DBDemo.Controllers
         [HttpGet("hats/new")]
         public IActionResult NewHatPage()
         {
+            ViewBag.People = _context
+                .People;
+
             return View();
         }
 

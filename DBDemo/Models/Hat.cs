@@ -16,5 +16,12 @@ namespace DBDemo.Models
 
         public DateTime CreatedAt {get;set;} = DateTime.Now;
         public DateTime UpdatedAt {get;set;} = DateTime.Now;
+
+        // references the owner's ID
+        // foreign key
+        public int PersonId {get;set;}
+
+        // navigation property
+        public Person Owner {get;set;}
     }
 }
